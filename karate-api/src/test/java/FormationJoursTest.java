@@ -49,4 +49,10 @@ public class FormationJoursTest {
         return Karate.run("classpath:features/formation/jour2/projet3-statistiques-blog.feature");
     }
 
+
+    @Karate.Test
+        Karate testToutSeulKarate() {
+            //  Arrays et listes
+            return Karate.run("classpath:features/formation/jour1/05-nouvel.feature");
+        }
 }

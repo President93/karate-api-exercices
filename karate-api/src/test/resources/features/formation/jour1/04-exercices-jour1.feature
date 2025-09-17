@@ -13,7 +13,13 @@ Feature: JOUR 1 - APRÈS-MIDI - Exercices pratiques et consolidation (2h)
     # 1. Récupérer tous les albums (/albums)
     # 2. Vérifier qu'on en a exactement 100
     # 3. Vérifier que le premier album a un userId et un id
-    
+    Given path '/albums'
+    When method GET
+    Then status 200
+    And match response == '#[100]'
+    And match response[0].id == "#present"
+    And match response[0].userId == "#present"
+
    
 
   Scenario: EXERCICE 2 - Trouver les albums d'un utilisateur
@@ -21,7 +27,11 @@ Feature: JOUR 1 - APRÈS-MIDI - Exercices pratiques et consolidation (2h)
     # CONSIGNES:
     # 1. Récupérer les albums de l'utilisateur 2
     # 2. Vérifier qu'ils appartiennent tous à cet utilisateur
-    
+    Given path '/albums'
+    And param userId = 2
+    When method GET
+    Then status 200
+    And match each response[*].userId == 2
    
   Scenario: EXERCICE 3 - Explorer les commentaires
     # 📝 DÉFI: Découvrir une nouvelle structure de données
@@ -29,6 +39,10 @@ Feature: JOUR 1 - APRÈS-MIDI - Exercices pratiques et consolidation (2h)
     # 1. Récupérer tous les commentaires (/comments)
     # 2. Examiner la structure du premier commentaire
     # 3. Vérifier qu'il a: postId, id, name, email, body
+  Given path '/comments'
+  When method GET
+  Then status 200
+  And match response[0] contains {postId: '#number', id: "#number", name: "#string", email: "#present", body :"#string"}
   
   Scenario: EXERCICE 4 - Validation d'email avec regex
     # 📝 DÉFI: Utiliser une expression régulière
