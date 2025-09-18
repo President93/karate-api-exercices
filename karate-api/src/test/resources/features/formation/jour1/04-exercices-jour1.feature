@@ -49,7 +49,10 @@ Feature: JOUR 1 - APRÈS-MIDI - Exercices pratiques et consolidation (2h)
     # CONSIGNES:
     # 1. Récupérer un commentaire
     # 2. Vérifier que l'email est au bon format
-    
+    Given path '/comments/1'
+    When method GET
+    Then status 200
+    And match response.email == '#regex ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'
     
 
   Scenario: EXERCICE 5 - Créer votre propre test
@@ -60,14 +63,31 @@ Feature: JOUR 1 - APRÈS-MIDI - Exercices pratiques et consolidation (2h)
     # - Combiner plusieurs vérifications
     
     # À vous de jouer ! Écrivez votre test ici...
-   
+   Given path '/albums/1/photos'
+    When method GET
+    Then status 200
+    And match response == '#[50]'
+    And match each response contains
+    """
+    { albumId: 1, id: '#number', title: '#string', url: '#string', thumbnailUrl: '#string' }
+    """
   Scenario: EXERCICE 6 - Test de cohérence des données
     # 📝 DÉFI AVANCÉ: Vérifier la logique métier
     # CONSIGNES:
     # 1. Récupérer un post spécifique
     # 2. Récupérer ses commentaires
     # 3. Vérifier que tous les commentaires pointent vers ce post
-    
+   * def postId = 3
+    Given path '/posts', postId
+    When method GET
+    Then status 200
+    And match response.id == postId
+
+    Given path '/posts', postId, 'comments'
+    When method GET
+    Then status 200
+    And match response == '#[5]'
+    And match each response contains { postId: '#number', id: '#number', email: '#regex .+@.+\\..+', body: '#string' } 
     
 
  
