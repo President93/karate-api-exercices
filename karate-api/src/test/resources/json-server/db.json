@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Premier post",
       "body": "Contenu du premier post",
       "userId": 1
@@ -10,79 +10,130 @@
       "title": "Titre stocké dans une variable",
       "body": "Contenu dynamique généré",
       "userId": 1,
-      "id": 2
+      "id": "2"
     },
     {
       "title": "Post source",
       "body": "Contenu",
       "userId": 1,
-      "id": 3
+      "id": "3"
     },
     {
       "title": "Post numéro 42",
       "body": "Email de contact: #(testEmail)",
       "userId": 1,
-      "id": 4
+      "id": "4"
     },
     {
       "title": "Premier post d'Alice",
       "body": "Post créé par #(user.name)",
       "userId": 1,
-      "id": 5
+      "id": "5"
     },
     {
       "title": "[USER] Post conditionnel",
       "body": "Ce post dépend de l'utilisateur",
       "userId": 2,
-      "id": 6
+      "id": "6"
     },
     {
       "title": "#(title)",
       "body": "Post créé automatiquement",
       "userId": "#(userId)",
-      "id": 7
+      "id": "7"
     },
     {
       "title": "Titre stocké dans une variable",
       "body": "Contenu dynamique généré",
       "userId": 1,
-      "id": 8
+      "id": "8"
     },
     {
       "title": "Post source",
       "body": "Contenu",
       "userId": 1,
-      "id": 9
+      "id": "9"
     },
     {
       "title": "Post numéro 42",
       "body": "Email de contact: #(testEmail)",
       "userId": 1,
-      "id": 10
+      "id": "10"
     },
     {
       "title": "Premier post d'Alice",
       "body": "Post créé par #(user.name)",
       "userId": 1,
-      "id": 11
+      "id": "11"
     },
     {
       "title": "[USER] Post conditionnel",
       "body": "Ce post dépend de l'utilisateur",
       "userId": 2,
-      "id": 12
+      "id": "12"
     },
     {
       "title": "#(title)",
       "body": "Post créé automatiquement",
       "userId": "#(userId)",
-      "id": 13
+      "id": "13"
+    },
+    {
+      "id": "212b"
+    },
+    {
+      "id": "1a3a"
+    },
+    {
+      "id": "d598"
+    },
+    {
+      "id": "5929",
+      "title": "Titre !",
+      "body": "Corps !",
+      "userId": 23052003
+    },
+    {
+      "id": "e9c6",
+      "title": "Titre !",
+      "body": "Corps !",
+      "userId": 23052003
+    },
+    {
+      "id": "442a",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "b1d6",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "ba69",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "bbd5",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "4118",
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": 1
     }
   ],
   "comments": [
     {
       "postId": 1,
-      "id": 1,
+      "id": "1",
       "name": "Premier commentaire",
       "email": "user@example.com",
       "body": "Contenu du commentaire"
@@ -91,14 +142,14 @@
   "albums": [
     {
       "userId": 1,
-      "id": 1,
+      "id": "1",
       "title": "Premier album"
     }
   ],
   "photos": [
     {
       "albumId": 1,
-      "id": 1,
+      "id": "1",
       "title": "Première photo",
       "url": "https://via.placeholder.com/600/92c952",
       "thumbnailUrl": "https://via.placeholder.com/150/92c952"
@@ -107,14 +158,14 @@
   "todos": [
     {
       "userId": 1,
-      "id": 1,
+      "id": "1",
       "title": "Première tâche",
       "completed": false
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "username": "johndoe",
       "email": "john@example.com",
@@ -137,7 +188,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jane Smith",
       "username": "janesmith",
       "email": "jane@example.com",
@@ -163,7 +214,7 @@
       "name": "Test User",
       "username": "testuser",
       "email": "test@example.com",
-      "id": 3
+      "id": "3"
     }
   ]
 }

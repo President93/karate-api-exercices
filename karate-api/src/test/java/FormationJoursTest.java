@@ -53,6 +53,6 @@ public class FormationJoursTest {
     @Karate.Test
         Karate testToutSeulKarate() {
             //  Arrays et listes
-            return Karate.run("classpath:features/formation/jour1/04-exercices-jour1.feature");
+            return Karate.run("classpath:features/formation/jour2/Exercice.feature");
         }
 }
