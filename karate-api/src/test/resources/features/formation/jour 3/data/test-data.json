@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Alice Martin",
+      "username": "alice_dev",
+      "email": "alice@formation.com",
+      "role": "developer"
+    },
+    {
+      "name": "Bob Dupont", 
+      "username": "bob_qa",
+      "email": "bob@formation.com",
+      "role": "tester"
+    },
+    {
+      "name": "Carol Bernard",
+      "username": "carol_pm", 
+      "email": "carol@formation.com",
+      "role": "manager"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Guide JavaScript",
+      "body": "Les bases du développement JavaScript",
+      "category": "tech"
+    },
+    {
+      "title": "Tests automatisés",
+      "body": "Comment créer une suite de tests efficace", 
+      "category": "quality"
+    },
+    {
+      "title": "Gestion de projet",
+      "body": "Méthodologies agiles et organisation d'équipe",
+      "category": "management"
+    }
+  ],
+  "config": {
+    "baseUrl": "https://jsonplaceholder.typicode.com",
+    "timeout": 5000,
+    "retries": 3
+  }
+}

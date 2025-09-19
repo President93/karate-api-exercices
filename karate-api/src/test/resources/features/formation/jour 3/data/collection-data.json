@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "hobbies": [
+    "reading",
+    "coding"
+  ],
+  "address": {
+    "street": "123 Main St",
+    "city": "Paris"
+  }
+}
+
+
+
+
+

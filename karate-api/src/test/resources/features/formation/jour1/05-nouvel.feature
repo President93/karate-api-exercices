@@ -6,7 +6,7 @@ Feature:
     
 Scenario: 
     Given path '/posts'
-    And request {"title": 'Titre !', "body": 'Corps !', "userId": 23052003}
+    And request {"title": 'Titre !', "body": 'Corps !', "userId":23052003}
     When method POST 
     Then status 201 
 

@@ -1,0 +1,6 @@
+name,username,email,role
+Alice Martin,alice_dev,alice@formation.com,developer
+Bob Dupont,bob_qa,bob@formation.com,tester
+Carol Bernard,carol_pm,carol@formation.com,manager
+David Moreau,david_lead,david@formation.com,lead
+Emma Rousseau,emma_ux,emma@formation.com,designer

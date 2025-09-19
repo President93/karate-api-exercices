@@ -1,0 +1,39 @@
+{
+  "equipe": [
+    {
+      "name": "Sophie Dupont",
+      "username": "sophie_dev", 
+      "email": "sophie@equipe.com",
+      "role": "Développeuse"
+    },
+    {
+      "name": "Marc Martin",
+      "username": "marc_test",
+      "email": "marc@equipe.com", 
+      "role": "Testeur"
+    },
+    {
+      "name": "Julie Bernard",
+      "username": "julie_pm",
+      "email": "julie@equipe.com",
+      "role": "Chef de projet"
+    }
+  ],
+  "projets": [
+    {
+      "title": "Développement mobile",
+      "body": "Application mobile pour notre client principal",
+      "priority": "haute"
+    },
+    {
+      "title": "Refonte du site web", 
+      "body": "Modernisation de notre site vitrine",
+      "priority": "moyenne"
+    },
+    {
+      "title": "Formation équipe",
+      "body": "Sessions de formation technique pour l'équipe",
+      "priority": "basse"
+    }
+  ]
+}

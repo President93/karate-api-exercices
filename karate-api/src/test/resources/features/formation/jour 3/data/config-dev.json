@@ -1,0 +1,19 @@
+{
+  "environment": "development",
+  "baseUrl": "https://jsonplaceholder.typicode.com",
+  "timeout": 10000,
+  "debug": true,
+  "maxRetries": 3,
+  "testUsers": {
+    "admin": {
+      "name": "Admin Test",
+      "username": "admin_test",
+      "email": "admin@test.com"
+    },
+    "regular": {
+      "name": "User Test", 
+      "username": "user_test",
+      "email": "user@test.com"
+    }
+  }
+}

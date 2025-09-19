@@ -2,9 +2,9 @@
   "posts": [
     {
       "id": "1",
-      "title": "Premier post",
-      "body": "Contenu du premier post",
-      "userId": 1
+      "title": "Post complètement remplacé avec PUT",
+      "body": "Tout l'ancien contenu a été effacé et remplacé",
+      "userId": 2
     },
     {
       "title": "Titre stocké dans une variable",
@@ -128,6 +128,66 @@
       "title": "Post avec headers explicites",
       "body": "J'ai spécifié les headers manuellement",
       "userId": 1
+    },
+    {
+      "id": "8400",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "ac69",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "1f7b",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "110e",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "f1de",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "4940",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "ae0c",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "fef4",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
+    },
+    {
+      "id": "ddcf",
+      "title": "Post 1",
+      "body": "Premier post",
+      "userId": 1
+    },
+    {
+      "id": "49ce",
+      "title": "Post 2",
+      "body": "Deuxième post",
+      "userId": 1
     }
   ],
   "comments": [
@@ -137,6 +197,36 @@
       "name": "Premier commentaire",
       "email": "user@example.com",
       "body": "Contenu du commentaire"
+    },
+    {
+      "id": "fd8e",
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": 1
+    },
+    {
+      "id": "c9cb",
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": "1\n  \"id\": 3"
+    },
+    {
+      "id": 3,
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Post avec headers explicites",
+      "body": "J'ai spécifié les headers manuellement",
+      "userId": 1
     }
   ],
   "albums": [
@@ -144,6 +234,16 @@
       "userId": 1,
       "id": "1",
       "title": "Premier album"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "New Album"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "New Album"
     }
   ],
   "photos": [
@@ -215,6 +315,18 @@
       "username": "testuser",
       "email": "test@example.com",
       "id": "3"
+    },
+    {
+      "id": "2e72",
+      "name": "Mehdi MIHOUBI",
+      "username": "MHB",
+      "email": "Mehdi@Mihoubi.com"
+    },
+    {
+      "id": "55d5",
+      "name": "Test User Modifié",
+      "username": "updateduser",
+      "email": "updated@example.com"
     }
   ]
 }
