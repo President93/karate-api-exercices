@@ -188,6 +188,24 @@
       "title": "Post 2",
       "body": "Deuxième post",
       "userId": 1
+    },
+    {
+      "id": "690c",
+      "title": "Misère et Pauvreté",
+      "body": "PlaceHolder",
+      "userId": 1
+    },
+    {
+      "id": "fd81",
+      "title": "Rapport technique",
+      "body": "Analyse des performances",
+      "userId": 2
+    },
+    {
+      "id": "93da",
+      "title": "Guide utilisateur",
+      "body": "Mode d'emploi détaillé",
+      "userId": 1
     }
   ],
   "comments": [

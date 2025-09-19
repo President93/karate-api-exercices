@@ -1,84 +1,45 @@
-Feature:
-    Background:
-        * url baseUrl
+# Feature: bla bla
+#     Background:
+#         * url jsonUrl
+#     Scenario: Créer plusieurs posts en une fois
+#     Given path '/posts'
+#     When method GET
+#     Then status 200
+#     * def all = response
+#     * print 'Nombre total déléments à supprimer:', all.length
+
+#     * karate.forEach(all, function(item){
+#         karate.log('Suppression de lelement ID:', item.id)
+#         var res = karate.call({
+#             url: jsonUrl + '/posts/' + item.id,
+#             method: 'delete'
+#         });
+#         karate.log('Supprime ID:', item.id, '| Status:', res.responseStatus);
+#     })
 
 
-    Scenario:
-        * def credentials = 'teamdlab:44mUTmCP8REI93QbpogYvVAu'
-        * def encoded = java.util.Base64.getEncoder().encodeToString(credentials.getBytes())
-        * header Authorization = 'Basic ' + encoded
-        
-        Given path 'api/Messages'
-        When method GET
-        Then status 200
-        * def allMessages = response
+Feature: Purge de tous les posts sans call()
 
-        * def destinataire = 'joana.hiu@xtech.com'
-        * def messagesToDelete = karate.filter(allMessages, function(m) { return m.to == destinataire })
+Background:
+    * def jsonUrl = 'http://localhost:3001'  
+    * url jsonUrl
 
-        * print 'Messages à supprimer pour', destinataire, ':', messagesToDelete.length
+Scenario: Supprimer tous les posts existants
+    # 1) Récupérer la liste
+    Given path 'posts'
+    When method GET
+    Then status 200
+    * def all = response
+    * print 'Nombre total d\'éléments à supprimer :', all.length
 
-
-        * karate.forEach(messagesToDelete, function(msg) {
-            karate.log('Suppression du message ID:', msg.id)
-            karate.call({
-            url: 'https://smtp-xam.xelians-dev.fr/api/Messages/' + msg.id,
-            method: 'delete',
-            headers: { Authorization: 'Basic ' + encoded }
-            })
-        })
-
-
-    # Scenario: Simuler CRUD sur l'utilisateur "Test User"
-
-        # # CREATE (POST)
-        # Given path '/users'
-        # And request
-        # """
-        # {
-        # "name": "Test User",
-        # "username": "testuser",
-        # "email": "test@example.com"
-        # }
-        # """
-        # When method POST
-        # Then status 201
-        # * def userId = response.id
-        # * print 'Utilisateur créé avec ID:', userId
-
-        # # READ (GET)
-        # Given path '/users', userId
-        # When method GET
-        # Then status 200
-        # And match response.name == "Test User"
-        # And match response.username == "testuser"
-        # * print 'Utilisateur récupéré:', response.name
-
-        # # UPDATE (PUT)
-        # Given path '/users', userId
-        # And request
-        # """
-        # {
-        # "id": "#(userId)",
-        # "name": "Test User Modifié",
-        # "username": "updateduser",
-        # "email": "updated@example.com"
-        # }
-        # """
-        # When method PUT
-        # Then status 200
-        # And match response.name == "Test User Modifié"
-        # And match response.username == "updateduser"
-        # * print 'Utilisateur mis à jour:', response.name
-
-        # # DELETE
-        # Given path '/users', userId
-        # When method DELETE
-        # Then status 200
-        # * print 'Utilisateur supprimé avec ID:', userId
-
-        # # VERIFY DELETE (GET après suppression)
-        # Given path '/users', userId
-        # When method GET
-        # Then status 404
-        # * print 'Vérification : utilisateur supprimé'
+    # 2) Supprimer chaque post via l'API JS karate.http()
+    * eval
+    """
+    var http = karate.http(jsonUrl);     // client HTTP réutilisable
+    for (var i = 0; i < all.length; i++) {
+      var id = all[i].id;
+      http.reset();                      // (bon réflexe) remet le path/params à zéro
+      http.path('posts', id).delete();   // DELETE /posts/{id}
+      karate.log('🗑️ Supprimé ID:', id, '| Status:', http.responseStatus);
+    }
+    """
